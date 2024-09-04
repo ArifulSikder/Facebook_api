@@ -1,0 +1,13 @@
+    // relation for permission table
+    
+    public function children()
+    {
+        return $this->hasMany(Permission::class, 'parent_id')->with('children1');
+    }
+    public function parent()
+    {
+        return $this->belongsTo(Permission::class, 'parent_id');
+    }
+
+// permisstion alter table
+ALTER TABLE `permissions` ADD `position` INT NOT NULL DEFAULT '0' AFTER `guard_name`, ADD `parent_id` BIGINT NOT NULL DEFAULT '0' AFTER `position`;

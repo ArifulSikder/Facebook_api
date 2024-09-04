@@ -1,0 +1,189 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+  
+:root {
+    --primary: #520068 !important;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-primary {
+    color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.text-primary {
+    color: var(--primary) !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+    color: #fff !important;
+    background-color: darken(var(--primary), 10%);
+    border-color: darken(var(--primary), 10%);
+}
+
+/* For .btn-outline-primary hover state */
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn-outline-primary:active,
+.btn-outline-primary.active,
+.show > .btn-outline-primary.dropdown-toggle {
+    color: #fff !important;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+  .text-primary {
+    color: #520068 !important;
+  }
+  
+#sidebar {
+    background-color: #520068;
+}
+
+.nav-para {
+    font-weight: bold;
+    color: white;
+}
+
+.manu-name {
+    font-weight: bold;
+}
+
+/* .card {
+    border-radius: 45px !important;
+}
+*/
+div.dataTables_processing>div:last-child>div {
+    background: #520068 !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff !important;
+    background-color: #520068 !important;
+    border: 2px solid gold;
+    border-radius: 21px;
+}
+input, textarea {
+    border-radius: 13px !important;
+} 
+
+.select2-container--bootstrap4 .select2-selection--single {
+    border-radius: 13px !important;
+}
+
+button, .mbtn {
+    border-radius: 12px !important;
+    padding-right: 15px !important;
+    padding-left: 15px !important;
+    font-weight: bold !important;
+}
+
+#reservationdate {
+    padding-left: 0 !important;
+}
+
+.card {
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.search-input {
+    border-radius: 20px;
+    height: 45px;
+    padding-left: 20px;
+    border: 1px solid #ccc;
+    width: 300px;
+}
+
+.btn-dates, .btn-filters {
+    border-radius: 20px;
+    height: 45px;
+    padding: 0 20px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 20px;
+}
+
+
+.payment-table thead th {
+    background-color: #f5f5f5;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    color: #000000;
+    font-size: 16px;
+}
+
+.payment-table thead th:first-child {
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+}
+
+.payment-table thead th:last-child {
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.payment-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.payment-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* carosel  */
+.carousel-control-next-icon {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #520068;
+}
+.carousel-control-prev-icon {
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #520068;
+}
+
+
+/* date time picker */
+
+.daterangepicker .calendar {
+    display: none; /* Hide calendar on initial load */
+}
+
+.manu-name {
+    font-size: 27px !important;
+}
+
+.gold{
+    color: gold;
+}
+
+.page-item.active .page-link {
+    background-color: purple !important;
+    border-color: purple !important;
+}
+
+.main-footer {
+    color: #000000 !important;
+}
