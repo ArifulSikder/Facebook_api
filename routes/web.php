@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\backend\commentController;
+use App\Http\Controllers\backend\messageController;
+use App\Http\Controllers\backend\pageController;
+use App\Http\Controllers\backend\statisticController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\OverviewController;
 use App\Http\Controllers\PostPaymentController;
@@ -22,10 +26,29 @@ Route::get('/', function () {
 Route::middleware('auth')->group(function () {
 
     Route::get('/dashboard', [OverviewController::class, 'index'])->name('dashboard');
-    
+    /**
+     * Page controller
+     */
+    Route::get('/page', [pageController::class, 'index'])->name('page');
+    /**
+     * Comment controller
+     */
+    Route::get('/comment', [commentController::class, 'index'])->name('comment');
+    /**
+     * message controller
+     */
+    Route::get('/message', [messageController::class, 'index'])->name('message');
+    /**
+     * statistic  controller
+     */
+    Route::get('/statistic', [statisticController::class, 'index'])->name('statistic');
+
+
+    Route::get('/message', [messageController::class, 'index'])->name('message');
+
     Route::get('/members', [MemberController::class, 'index'])->name('members');
     Route::get('members/data', [MemberController::class, 'getData'])->name('members.data');
-    
+
     Route::get('/get-members', [MemberController::class, 'getMembers'])->name('get-members');
     Route::get('/add-member', [MemberController::class, 'addMember'])->name('add-member');
     Route::post('/store-member', [MemberController::class, 'storeMember'])->name('store-member');
@@ -34,8 +57,8 @@ Route::middleware('auth')->group(function () {
     Route::put('/update-member/{id}', [MemberController::class, 'updateMember'])->name('update-member');
     Route::get('/members/payment-log/{id}', [MemberController::class, 'membersPaymentLog']);
     Route::get('/delete-member/{id}', [MemberController::class, 'deleteMember']);
-    
-    
+
+
     Route::get('/accounts', [AccountController::class, 'index'])->name('accounts');
     Route::get('/accounts/data', [AccountController::class, 'accountData']);
     Route::get('/delete-account/{id}', [AccountController::class, 'deleteAccount']);
@@ -73,7 +96,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/reports', [ReportController::class, 'index'])->name('reports');
-    
+
 Route::controller(RoleAndPermission::class)->group(function(){
     //role
     Route::get('/user-role', 'roleIndex')->name('user-role');
