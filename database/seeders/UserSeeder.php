@@ -1,6 +1,8 @@
 <?php
 
 namespace Database\Seeders;
+
+
 use Faker\Factory as Faker;
 use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -16,7 +18,7 @@ class UserSeeder extends Seeder
     {
         $faker = Faker::create();
 
-        $numberOfUsers = 100000;
+        $numberOfUsers = 20;
 
         foreach (range(1, $numberOfUsers) as $index) {
             User::create([
@@ -34,5 +36,8 @@ class UserSeeder extends Seeder
         }
 
         $this->command->info('Users table seeded!');
-}
+
+
+
+    }
 }

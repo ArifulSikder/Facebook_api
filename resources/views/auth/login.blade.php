@@ -125,10 +125,6 @@
     <div class="login-container">
         <!-- Login Form Section -->
         <div class="login-form">
-            <div class="login-logo">
-                <img src="{{ asset('backend/dist/img/logo/logo2.jpg') }}" alt="Logo">
-                <h1>New Salem</h1>
-            </div>
             <p class="login-box-msg">Please sign in to your account</p>
 
             <form method="POST" action="{{ route('login') }}">
