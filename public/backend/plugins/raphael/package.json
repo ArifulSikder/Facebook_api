@@ -21,13 +21,13 @@
     "webpack-cli": "3.3.6"
   },
   "scripts": {
-    "start": "yarn build-all",
-    "dev": "webpack -d",
-    "build-src": "webpack -d --devtool none",
-    "build-no-deps": "webpack --env.noDeps -d --devtool none --output-filename raphael.no-deps.js",
-    "build-no-deps-min": "webpack --env.noDeps -p --output-filename raphael.no-deps.min.js",
-    "build-prod": "webpack -p --output-filename raphael.min.js",
-    "build-all": "yarn build-src && yarn build-no-deps && yarn build-no-deps-min && yarn build-prod",
+    "start": "node init && yarn build-all",
+    "dev": "node init && webpack -d",
+    "build-src": "node init && webpack -d --devtool none",
+    "build-no-deps": "node init && webpack --env.noDeps -d --devtool none --output-filename raphael.no-deps.js",
+    "build-no-deps-min": "node init && webpack --env.noDeps -p --output-filename raphael.no-deps.min.js",
+    "build-prod": "node init && webpack -p --output-filename raphael.min.js",
+    "build-all": "node init && yarn build-src && yarn build-no-deps && yarn build-no-deps-min && yarn build-prod",
     "test": "echo \"Open dev/test/index.html with your browser\" && exit 1",
     "prepublishOnly": "yarn build-all"
   },
